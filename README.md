@@ -1,6 +1,6 @@
 # About
 
-//TODO
+The course gives practical skills for building client applications (Single Page Applications) using one of the most popular tools. Views and templates for data visualization (templates), models, data binding, working with multiple views, routing, extracting data from REST services are studied. The training provides knowledge and practical skills for the development of Single Page Applications (SPA) using ReactJS technology - one of the most popular and fast client interface rendering libraries, developed and supported by Facebook and Instagram.
 
 # Course Overview
 
