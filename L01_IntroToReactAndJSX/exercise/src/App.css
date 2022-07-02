@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-page {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 0;
+}
+
+.header-page img {
+    max-width: 150px;
+}
+
+.header-nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.nav-li-item>a {
+    text-decoration: none;
+    color: #59546c;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.taxes {
+    background: linear-gradient(180deg, #54546d 59%, #fff 50%);
+    position: relative;
+    height: 550px;
+}
+
+.taxes::before {
+    content: '';
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50px;
+    left: -8%;
+    bottom: 0;
+    right: 0;
+}
+
+.taxes-title {
+    color: #fffffc;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.courses {
+    width: 90%;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    gap: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 20px;
+}
+
+.course-item {
+    background-color: #fffffc;
+    color: #59546c;
+    width: 430px;
+    height: 300px;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.course-title {
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.course-button {
+    background-color: #7634af;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    padding: 14px 24px;
+    margin: 20px 0 46px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+    cursor: pointer;
+}
+
+.course-tax-green>.course-price {
+    margin-bottom: 0;
+}
+
+.course-text {
+    padding: 0 40px;
+}
+
+.bolder-text {
+    font-weight: bold;
+}
+
+.course-prices {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.course-prices.green {
+    background: linear-gradient(to left, #4cd781, #029a3c);
+    display: block;
+}
+
+.course-prices.blue {
+    background: linear-gradient(to left, #629bd0, #4c6b87);
+}
+
+.course-prices.purple {
+    background: linear-gradient(to left, #8d7ee2, #4a37a5);
+}
+
+.course-prices {
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 6px 6px;
+}
+
+.course-tax-offer.line {
+    position: relative;
+}
+
+.course-tax-offer.line::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 0;
+    bottom: 0;
+    left: 120%;
+    width: 2px;
+    height: 72px;
+    background-color: #fffffc;
+}
+
+.programs-title {
+    font-size: 1.5em;
+}
+
+.progrmas-text {
+    margin-bottom: 40px;
+    font-size: 1.13em;
+    line-height: 24px;
+}
+
+.training-programs {
+    margin: 0 auto;
+    width: 75%;
+}
+
+.table-benefits {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+.table-row .table-el:not(.table-el:first-child) {
+    width: 15%;
+}
+
+.table-row:nth-child(odd) {
+    background-color: #e6e6e4;
+}
+
+.table-row:nth-child(even) {
+    background-color: #f8f8f5;
+}
+
+.table-row>.table-el:not(.table-el:first-child) {
+    padding: 0 50px;
+}
+
+.table-el {
+    padding: 15px;
+}
+
+.top-border {
+    border-top-left-radius: 6px;
+}
+
+.bottom-left-border {
+    border-radius: 0 0 0 6px;
+}
+
+.bottom-right-border {
+    border-radius: 0 0 6px;
+}
+
+.postbank-benefit {
+    margin: 60px auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.benefit-text-info {
+    padding-right: 60px;
+    line-height: 24px;
+    word-spacing: 2px;
+}
+
+.postbank-benefit>img {
+    height: 100px;
+}
+
+footer {
+    background-color: #59546c;
+    padding: 15px 0;
+}
+
+.footer-content {
+    color: #9892a8;
+    text-align: center;
+    font-weight: bold;
+}
