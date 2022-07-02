@@ -8,7 +8,7 @@ function Training() {
                 както за учещи и работещи, така и за курсисти, живеещи във всяка точка на света. Студентите могат да
                 избират дали желаят да се обучават присъствено или онлайн за всеки отделен модул от учебния план.
             </p>
-
+ 
             <table className="table-benefits" />
             <tr className="table-row">
                 <td className="table-el top-border">
