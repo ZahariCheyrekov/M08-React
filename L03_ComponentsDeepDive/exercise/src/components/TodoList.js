@@ -1,13 +1,17 @@
-import React from 'react';
-import uniqid from 'uniqid';
+import { useEffect, useState } from 'react';
 import TodoListItem from './TodoListItem';
 
+import uniqid from 'uniqid';
+
+import { getTodos } from '../services/api';
+
 export default function TodoList() {
-    const [todos, setTodos] = React.useState([
-        { id: uniqid(), text: 'Clean my room' },
-        { id: uniqid(), text: 'Make breakfast' },
-        { id: uniqid(), text: 'Wash the dishesh' },
-    ]);
+    const [todos, setTodos] = useState([]);
+
+    useEffect(() => {
+        getTodos()
+            .then(todos => setTodos(Object.values(todos)));
+    }, []);
 
     const onToDoBlur = (ev) => {
         let todo = {
