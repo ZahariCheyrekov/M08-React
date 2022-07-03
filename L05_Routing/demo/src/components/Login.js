@@ -1,7 +1,17 @@
+import { useHistory } from "react-router-dom";
+
 const Login = () => {
+    let history = useHistory();
+
+    const submitLoginHandler = (ev) => {
+        ev.preventDefault();
+
+        history.push('/create');
+    }
+
     return (
         <section id="login-page" className="auth">
-            <form id="login">
+            <form onSubmit={submitLoginHandler} id="login">
                 <div className="container">
                     <div className="brand-logo"></div>
                     <h1>Login</h1>
