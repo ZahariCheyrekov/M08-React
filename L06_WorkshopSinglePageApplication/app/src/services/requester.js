@@ -1,3 +1,5 @@
+import * as userService from './userService';
+
 export const request = (method, url, data) => {
     let options = {
         method,
@@ -11,7 +13,7 @@ export const request = (method, url, data) => {
     }
 
     if (data) {
-        options.headers['Content-Type'] = 'application/josn';
+        options.headers['Content-Type'] = 'application/json';
 
         if (method !== 'GET') {
             options.body = JSON.stringify(data);
