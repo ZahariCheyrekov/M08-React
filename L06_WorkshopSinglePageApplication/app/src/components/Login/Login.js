@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { login } from '../../services/requestService';
 
-const Login = () => {
+const Login = ({ onLogin }) => {
     const navigate = useNavigate();
 
     const loginSubmitHandler = (ev) => {
@@ -13,12 +13,13 @@ const Login = () => {
         const password = data.get('password');
 
         login(email, password);
+        onLogin(email);
         navigate('/');
     }
 
     return (
         <section id="login-page" className="login">
-            <form onSubmit={loginSubmitHandler} id="login-form" action="" method="">
+            <form onSubmit={loginSubmitHandler} id="login-form" action="" method="POST">
                 <fieldset>
                     <legend>Login Form</legend>
                     <p className="field">
