@@ -3,10 +3,10 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Create from './components/Create';
 import Dashboard from './components/Dashboard';
-import Details from './components/Details';
-import Edit from './components/Edit';
 import MyPets from './components/MyPets';
 import Footer from './components/Footer';
+
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
    return (
@@ -14,13 +14,13 @@ function App() {
          <Header />
 
          <main id="site-content">
-            <Login />
-            <Register />
-            <Dashboard />
-            <Details />
-            <Create />
-            <Edit />
-            <MyPets />
+            <Routes>
+               <Route path='/' element={<Dashboard />} />
+               <Route path='/login' element={<Login />} />
+               <Route path='/register' element={<Register />} />
+               <Route path='/create' element={<Create />} />
+               <Route path='/my-pets' element={<MyPets />} />
+            </Routes>
          </main>
 
          <Footer />
