@@ -1,7 +1,24 @@
+import { useNavigate } from 'react-router-dom';
+import { login } from '../../services/requestService';
+
 const Login = () => {
+    const navigate = useNavigate();
+
+    const loginSubmitHandler = (ev) => {
+        ev.preventDefault();
+
+        const data = new FormData(ev.currentTarget);
+
+        const email = data.get('email');
+        const password = data.get('password');
+
+        login(email, password);
+        navigate('/');
+    }
+
     return (
         <section id="login-page" className="login">
-            <form id="login-form" action="" method="">
+            <form onSubmit={loginSubmitHandler} id="login-form" action="" method="">
                 <fieldset>
                     <legend>Login Form</legend>
                     <p className="field">
