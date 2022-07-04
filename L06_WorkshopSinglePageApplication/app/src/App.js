@@ -1,278 +1,244 @@
 function App() {
-  return (
-    <div >
+   return (
+      <div id="container">
 
-      <!DOCTYPE html>
-      <html lang="en">
-
-        <head>
-          <meta charset="UTF-8">
-            <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-            <link rel="stylesheet" href="/styles/styles.css">
-              <title>Pet my Pet</title>
-            </head>
-
-            <body>
-              <div id="container">
-
-                <header id="site-header">
-                  <!-- Navigation -->
-                  <nav class="navbar">
-                    <section class="navbar-dashboard">
-                      <a href="#">Dashboard</a>
-                      <!-- Guest users -->
-                      <div id="guest">
-                        <a class="button" href="#">Login</a>
-                        <a class="button" href="#">Register</a>
-                      </div>
-                      <!-- Logged-in users -->
-                      <div id="user">
-                        <span>Welcome, {email}</span>
-                        <a class="button" href="#">My Pets</a>
-                        <a class="button" href="#">Add Pet</a>
-                        <a class="button" href="#">Logout</a>
-                      </div>
-                    </section>
-                  </nav>
-                </header>
-
-                <!-- Main Content -->
-                <main id="site-content"></main>
-
-                <!-- Login Page ( Only for Guest users ) -->
-                <section id="login-page" class="login">
-                  <form id="login-form" action="" method="">
-                    <fieldset>
-                      <legend>Login Form</legend>
-                      <p class="field">
-                        <label for="email">Email</label>
-                        <span class="input">
-                          <input type="text" name="email" id="email" placeholder="Email">
-                        </span>
-                      </p>
-                      <p class="field">
-                        <label for="password">Password</label>
-                        <span class="input">
-                          <input type="password" name="password" id="password" placeholder="Password">
-                        </span>
-                      </p>
-                      <input class="button submit" type="submit" value="Login">
-                    </fieldset>
-                  </form>
-                </section>
-
-                <!-- Register Page ( Only for Guest users ) -->
-                <section id="register-page" class="register">
-                  <form id="register-form" action="" method="">
-                    <fieldset>
-                      <legend>Register Form</legend>
-                      <p class="field">
-                        <label for="email">Email</label>
-                        <span class="input">
-                          <input type="text" name="email" id="email" placeholder="Email">
-                        </span>
-                      </p>
-                      <p class="field">
-                        <label for="password">Password</label>
-                        <span class="input">
-                          <input type="password" name="password" id="password" placeholder="Password">
-                        </span>
-                      </p>
-                      <p class="field">
-                        <label for="repeat-pass">Repeat Password</label>
-                        <span class="input">
-                          <input type="password" name="confirm-pass" id="repeat-pass" placeholder="Repeat Password">
-                        </span>
-                      </p>
-                      <input class="button submit" type="submit" value="Register">
-                    </fieldset>
-                  </form>
-                </section>
-
-                <!-- Dashboard Page ( for Guests and Users ) -->
-                <section id="dashboard-page" class="dashboard">
-                  <h1>Dashboard</h1>
-                  <!-- Display ul: with list-items for All pets (If any) -->
-                  <ul class="other-pets-list">
-                    <li class="otherPet">
-                      <h3>Name: Buddy</h3>
-                      <p>Type: dog</p>
-                      <p class="img"><img src="/images/dog2.png"></p>
-                      <a class="button" href="#">Details</a>
-                    </li>
-
-                    <li class="otherPet">
-                      <h3>Name: Tyson</h3>
-                      <p>Type: parrot</p>
-                      <p class="img"><img src="/images/parrot.png"></p>
-                      <a class="button" href="#">Details</a>
-                    </li>
-
-                    <li class="otherPet">
-                      <h3>Name: Milo</h3>
-                      <p>Type: dog</p>
-                      <p class="img"><img src="/images/dog.png"></p>
-                      <a class="button" href="#">Details</a>
-                    </li>
-
-                    <li class="otherPet">
-                      <h3>Name: Tom</h3>
-                      <p>Type: cat</p>
-                      <p class="img"><img src="/images/cat1.png"></p>
-                      <a class="button" href="#">Details</a>
-                    </li>
-                  </ul>
-                  <!-- Display paragraph: If there are no pets in the database -->
-                  <p class="no-pets">No pets in database!</p>
-                </section>
-
-                <!-- Details Page ( for Guests and Users ) -->
-                <section id="details-page" class="details">
-                  <div class="pet-information">
-                    <h3>Name: Milo</h3>
-                    <p class="type">Type: dog</p>
-                    <p class="img"><img src="/images/dog.png"></p>
-                    <div class="actions">
-                      <!-- Edit/Delete buttons ( Only for creator of this pet )  -->
-                      <a class="button" href="#">Edit</a>
-                      <a class="button" href="#">Delete</a>
-
-                      <!-- Bonus -->
-                      <!-- Like button ( Only for logged-in users, which is not creators of the current pet ) -->
-                      <a class="button" href="#">Like</a>
-
-                      <!-- ( for Guests and Users )  -->
-                      <div class="likes">
-                        <img class="hearts" src="/images/heart.png">
-                          <span id="total-likes">Likes: 0</span>
-                      </div>
-                      <!-- Bonus -->
-                    </div>
+         <header id="site-header">
+            <nav className="navbar">
+               <section className="navbar-dashboard">
+                  <a href="#">Dashboard</a>
+                  <div id="guest">
+                     <a className="button" href="#">Login</a>
+                     <a className="button" href="#">Register</a>
                   </div>
-                  <div class="pet-description">
-                    <h3>Description:</h3>
-                    <p>Today, some dogs are used as pets, others are used to help humans do their work. They are a popular
-                      pet because they are usually playful, friendly, loyal and listen to humans. Thirty million dogs in
-                      the United States are registered as pets.[5] Dogs eat both meat and vegetables, often mixed together
-                      and sold in stores as dog food. Dogs often have jobs, including as police dogs, army dogs,
-                      assistance dogs, fire dogs, messenger dogs, hunting dogs, herding dogs, or rescue dogs.</p>
+
+                  <div id="user">
+                     <span>Welcome, email add</span>
+                     <a className="button" href="#">My Pets</a>
+                     <a className="button" href="#">Add Pet</a>
+                     <a className="button" href="#">Logout</a>
                   </div>
-                </section>
+               </section>
+            </nav>
+         </header>
 
-                <!-- Create Page ( Only for logged-in users ) -->
-                <section id="create-page" class="create">
-                  <form id="create-form" action="" method="">
-                    <fieldset>
-                      <legend>Add new Pet</legend>
-                      <p class="field">
-                        <label for="name">Name</label>
-                        <span class="input">
-                          <input type="text" name="name" id="name" placeholder="Name">
-                        </span>
-                      </p>
-                      <p class="field">
-                        <label for="description">Description</label>
-                        <span class="input">
-                          <textarea name="description" id="description" placeholder="Description"></textarea>
-                        </span>
-                      </p>
-                      <p class="field">
-                        <label for="image">Image</label>
-                        <span class="input">
-                          <input type="text" name="imageUrl" id="image" placeholder="Image">
-                        </span>
-                      </p>
-                      <p class="field">
-                        <label for="type">Type</label>
-                        <span class="input">
-                          <select id="type" name="type">
-                            <option value="cat">Cat</option>
-                            <option value="dog">Dog</option>
-                            <option value="parrot">Parrot</option>
-                            <option value="reptile">Reptile</option>
-                            <option value="other">Other</option>
-                          </select>
-                        </span>
-                      </p>
-                      <input class="button submit" type="submit" value="Add Pet">
-                    </fieldset>
-                  </form>
-                </section>
+         <main id="site-content"></main>
 
-                <!-- Edit Page ( Only for the creator )-->
-                <section id="edit-page" class="edit">
-                  <form id="edit-form" action="#" method="">
-                    <fieldset>
-                      <legend>Edit my Pet</legend>
-                      <p class="field">
-                        <label for="name">Name</label>
-                        <span class="input">
-                          <input type="text" name="name" id="name" value="Milo">
-                        </span>
-                      </p>
-                      <p class="field">
-                        <label for="description">Description</label>
-                        <span class="input">
-                          <textarea name="description"
-                            id="description">Today, some dogs are used as pets, others are used to help humans do their work. They are a popular pet because they are usually playful, friendly, loyal and listen to humans. Thirty million dogs in the United States are registered as pets.[5] Dogs eat both meat and vegetables, often mixed together and sold in stores as dog food. Dogs often have jobs, including as police dogs, army dogs, assistance dogs, fire dogs, messenger dogs, hunting dogs, herding dogs, or rescue dogs.</textarea>
-                        </span>
-                      </p>
-                      <p class="field">
-                        <label for="image">Image</label>
-                        <span class="input">
-                          <input type="text" name="imageUrl" id="image" value="/images/dog.png">
-                        </span>
-                      </p>
-                      <p class="field">
-                        <label for="type">Type</label>
-                        <span class="input">
-                          <select id="type" name="type" value="dog">
-                            <option value="cat" >Cat</option>
-                            <option value="dog" selected>Dog</option>
-                            <option value="parrot">Parrot</option>
-                            <option value="reptile">Reptile</option>
-                            <option value="other">Other</option>
-                          </select>
-                        </span>
-                      </p>
-                      <input class="button submit" type="submit" value="Save">
-                    </fieldset>
-                  </form>
-                </section>
+         <section id="login-page" className="login">
+            <form id="login-form" action="" method="">
+               <fieldset>
+                  <legend>Login Form</legend>
+                  <p className="field">
+                     <label htmlFor="email">Email</label>
+                     <span className="input">
+                        <input type="text" name="email" id="email" placeholder="Email" />
+                     </span>
+                  </p>
+                  <p className="field">
+                     <label htmlFor="password">Password</label>
+                     <span className="input">
+                        <input type="password" name="password" id="password" placeholder="Password" />
+                     </span>
+                  </p>
+                  <input className="button submit" type="submit" defaultValue="Login" />
+               </fieldset>
+            </form>
+         </section>
 
-                <!-- My Pets Page ( Only for logged-in users ) -->
-                <section id="my-pets-page" class="my-pets">
-                  <h1>My Pets</h1>
-                  <!-- Display ul: with list-items for every user's pet (if any) -->
-                  <ul class="my-pets-list">
-                    <li class="otherPet">
-                      <h3>Name: Milo</h3>
-                      <p>Type: dog</p>
-                      <p class="img"><img src="/images/dog.png"></p>
-                      <a class="button" href="#">Details</a>
-                    </li>
-                    <li class="otherPet">
-                      <h3>Name: Tom</h3>
-                      <p>Type: cat</p>
-                      <p class="img"><img src="/images/cat1.png"></p>
-                      <a class="button" href="#">Details</a>
-                    </li>
-                  </ul>
+         <section id="register-page" className="register">
+            <form id="register-form" action="" method="">
+               <fieldset>
+                  <legend>Register Form</legend>
+                  <p className="field">
+                     <label htmlFor="email">Email</label>
+                     <span className="input">
+                        <input type="text" name="email" id="email" placeholder="Email" />
+                     </span>
+                  </p>
+                  <p className="field">
+                     <label htmlFor="password">Password</label>
+                     <span className="input">
+                        <input type="password" name="password" id="password" placeholder="Password" />
+                     </span>
+                  </p>
+                  <p className="field">
+                     <label htmlFor="repeat-pass">Repeat Password</label>
+                     <span className="input">
+                        <input type="password" name="confirm-pass" id="repeat-pass" placeholder="Repeat Password" />
+                     </span>
+                  </p>
+                  <input className="button submit" type="submit" defaultValue="Register" />
+               </fieldset>
+            </form>
+         </section>
 
-                  <!-- Display paragraph: If the user doesn't have his own pets  -->
-                  <p class="no-pets">No pets in database!</p>
-                </section>
+         <section id="dashboard-page" className="dashboard">
+            <h1>Dashboard</h1>
+            <ul className="other-pets-list">
+               <li className="otherPet">
+                  <h3>Name: Buddy</h3>
+                  <p>Type: dog</p>
+                  <p className="img"><img src="/images/dog2.png" /></p>
+                  <a className="button" href="#">Details</a>
+               </li>
 
-                <footer id="site-footer">
-                  <p>@PetMyPet</p>
-                </footer>
+               <li className="otherPet">
+                  <h3>Name: Tyson</h3>
+                  <p>Type: parrot</p>
+                  <p className="img"><img src="/images/parrot.png" /></p>
+                  <a className="button" href="#">Details</a>
+               </li>
 
-              </div>
-            </body>
+               <li className="otherPet">
+                  <h3>Name: Milo</h3>
+                  <p>Type: dog</p>
+                  <p className="img"><img src="/images/dog.png" /></p>
+                  <a className="button" href="#">Details</a>
+               </li>
 
-          </html>
-        </div>
-        );
+               <li className="otherPet">
+                  <h3>Name: Tom</h3>
+                  <p>Type: cat</p>
+                  <p className="img"><img src="/images/cat1.png" /></p>
+                  <a className="button" href="#">Details</a>
+               </li>
+            </ul>
+
+            <p className="no-pets">No pets in database!</p>
+         </section>
+
+         <section id="details-page" className="details">
+            <div className="pet-information">
+               <h3>Name: Milo</h3>
+               <p className="type">Type: dog</p>
+               <p className="img"><img src="/images/dog.png" /></p>
+               <div className="actions">
+
+                  <a className="button" href="#">Edit</a>
+                  <a className="button" href="#">Delete</a>
+
+                  <a className="button" href="#">Like</a>
+
+                  <div className="likes">
+                     <img className="hearts" src="/images/heart.png" />
+                     <span id="total-likes">Likes: 0</span>
+                  </div>
+               </div>
+            </div>
+            <div className="pet-description">
+               <h3>Description:</h3>
+               <p>Today, some dogs are used as pets, others are used to help humans do their work. They are a popular
+                  pet because they are usually playful, friendly, loyal and listen to humans. Thirty million dogs in
+                  the United States are registered as pets.[5] Dogs eat both meat and vegetables, often mixed together
+                  and sold in stores as dog food. Dogs often have jobs, including as police dogs, army dogs,
+                  assistance dogs, fire dogs, messenger dogs, hunting dogs, herding dogs, or rescue dogs.</p>
+            </div>
+         </section>
+
+         <section id="create-page" className="create">
+            <form id="create-form" action="" method="">
+               <fieldset>
+                  <legend>Add new Pet</legend>
+                  <p className="field">
+                     <label htmlFor="name">Name</label>
+                     <span className="input">
+                        <input type="text" name="name" id="name" placeholder="Name" />
+                     </span>
+                  </p>
+                  <p className="field">
+                     <label htmlFor="description">Description</label>
+                     <span className="input">
+                        <textarea name="description" id="description" placeholder="Description"></textarea>
+                     </span>
+                  </p>
+                  <p className="field">
+                     <label htmlFor="image">Image</label>
+                     <span className="input">
+                        <input type="text" name="imageUrl" id="image" placeholder="Image" />
+                     </span>
+                  </p>
+                  <p className="field">
+                     <label htmlFor="type">Type</label>
+                     <span className="input">
+                        <select id="type" name="type">
+                           <option defaultValue="cat">Cat</option>
+                           <option defaultValue="dog">Dog</option>
+                           <option defaultValue="parrot">Parrot</option>
+                           <option defaultValue="reptile">Reptile</option>
+                           <option defaultValue="other">Other</option>
+                        </select>
+                     </span>
+                  </p>
+                  <input className="button submit" type="submit" defaultValue="Add Pet" />
+               </fieldset>
+            </form>
+         </section>
+
+         <section id="edit-page" className="edit">
+            <form id="edit-form" action="#" method="">
+               <fieldset>
+                  <legend>Edit my Pet</legend>
+                  <p className="field">
+                     <label htmlFor="name">Name</label>
+                     <span className="input">
+                        <input type="text" name="name" id="name" defaultValue="Milo" />
+                     </span>
+                  </p>
+                  <p className="field">
+                     <label htmlFor="description">Description</label>
+                     <span className="input">
+                        <textarea name="description"
+                           id="description">Today, some dogs are used as pets, others are used to help humans do their work. They are a popular pet because they are usually playful, friendly, loyal and listen to humans. Thirty million dogs in the United States are registered as pets.[5] Dogs eat both meat and vegetables, often mixed together and sold in stores as dog food. Dogs often have jobs, including as police dogs, army dogs, assistance dogs, fire dogs, messenger dogs, hunting dogs, herding dogs, or rescue dogs.</textarea>
+                     </span>
+                  </p>
+                  <p className="field">
+                     <label htmlFor="image">Image</label>
+                     <span className="input">
+                        <input type="text" name="imageUrl" id="image" defaultValue="/images/dog.png" />
+                     </span>
+                  </p>
+                  <p className="field">
+                     <label htmlFor="type">Type</label>
+                     <span className="input">
+                        <select id="type" name="type" defaultValue="dog">
+                           <option defaultValue="cat" >Cat</option>
+                           <option defaultValue="dog" selected>Dog</option>
+                           <option defaultValue="parrot">Parrot</option>
+                           <option defaultValue="reptile">Reptile</option>
+                           <option defaultValue="other">Other</option>
+                        </select>
+                     </span>
+                  </p>
+                  <input className="button submit" type="submit" defaultValue="Save" />
+               </fieldset>
+            </form>
+         </section>
+
+         <section id="my-pets-page" className="my-pets">
+            <h1>My Pets</h1>
+
+            <ul className="my-pets-list">
+               <li className="otherPet">
+                  <h3>Name: Milo</h3>
+                  <p>Type: dog</p>
+                  <p className="img"><img src="/images/dog.png" /></p>
+                  <a className="button" href="#">Details</a>
+               </li>
+               <li className="otherPet">
+                  <h3>Name: Tom</h3>
+                  <p>Type: cat</p>
+                  <p className="img"><img src="/images/cat1.png" /></p>
+                  <a className="button" href="#">Details</a>
+               </li>
+            </ul>
+
+            <p className="no-pets">No pets in database!</p>
+         </section>
+
+         <footer id="site-footer">
+            <p>@PetMyPet</p>
+         </footer>
+      </div>
+   );
 }
 
-        export default App;
+export default App;
