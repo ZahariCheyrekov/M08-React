@@ -1,8 +1,9 @@
-import Counter from './components/Counter/Counter';
-import CounIfno from './components/Counter/CountInfo';
-
 import { useState, useEffect } from 'react';
 import uniqid from 'uniqid';
+
+import Counter from './components/Counter/Counter';
+import CounIfno from './components/Counter/CountInfo';
+import CharacterList from './components/CharacterList';
 
 import AuthContext from './contexts/authContext';
 
@@ -39,6 +40,8 @@ function App() {
 
                 <button onClick={() => setCount(count + 1)}>+</button>
                 <CounIfno />
+
+                <CharacterList />
             </div >
         </AuthContext.Provider>
     );
