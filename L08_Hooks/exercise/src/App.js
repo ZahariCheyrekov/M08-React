@@ -5,7 +5,13 @@ function App() {
   const [name, setName] = useState('');
   const [count, setCount] = useState(0);
 
- 
+  useEffect(() => {
+
+    setTimeout(() => {
+      setName('Atlas');
+    }, 1000);
+
+  }, []);
 
   return (
     <div>
