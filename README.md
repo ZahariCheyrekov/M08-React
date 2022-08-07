@@ -5,7 +5,7 @@ The course gives practical skills for building client applications (Single Page 
 # Course Overview
 
 - <a href="#INTROJSX">Intro to React and JSX</a>
-- <a href="#COMPBI">Components: Basic Idea</a>
+- <a href="#COMPBI">Components: Basic Idea</a> 
 - <a href="#COMPDD">Components: Deep Dive</a>
 - <a href="#FORMS">Forms</a>
 - <a href="#ROUT">Routing</a>
